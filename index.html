@@ -1,1 +1,231 @@
-our app
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of Archives</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 200vh;
+            background-color: black; /* Ensure background stays black */
+            overflow: auto; /* Enable scrolling */
+        }
+
+        canvas {
+            display: block;
+            position: fixed; /* Keep canvas fixed during scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Ensure canvas is behind other elements */
+        }
+
+        .logo {
+            position: fixed; /* Keep the logo fixed in the top-left corner */
+            top: 15px; /* Adjust spacing from the top */
+            left: 25px; /* Adjust spacing from the left */
+            height: 100px; /* Set the size of the logo */
+            z-index: 10; /* Ensure the logo stays above other elements */
+            cursor: pointer; /* Make it clickable */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            z-index: 1; /* Ensure navbar is above content but below the logo */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .section-container {
+            left: 50%;
+            transform: translateX(-50%);
+            position: fixed;
+            top: 50px;
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 1;
+            font-size: 2em;
+        }
+
+        .guardian-button {
+            position: absolute;
+            bottom: 10%; /* Adjust to position it below the center */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            color: black;
+            background-color: rgba(255, 222, 178, 0.807);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2; /* Ensure it’s above the canvas */
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .guardian-button.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .popup-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3; /* Above other elements */
+            visibility: hidden; /* Hidden by default */
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .popup-modal.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup-content {
+            background-color: rgb(10, 10, 10);
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content h2 {
+            margin: 0 0 15px 0;
+        }
+
+        .popup-content input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 15px;
+            border: 1px solid rgba(162, 0, 0, 0.807);
+            border-radius: 5px;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .send-button {
+            background-color: #28a745; /* Green button */
+            color: white;
+            margin-right: 10px;
+        }
+
+        .close-button {
+            background-color: #dc3545; /* Red button */
+            color: white;
+        }
+
+        #additionalSections {
+            visibility: hidden; /* Initially hidden */
+            opacity: 0; /* Initially transparent */
+            transition: visibility 0s, opacity 0.5s ease; /* Smooth transition for fade-in */
+        }
+
+        .extra-section {
+            width: 300px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent white */
+            position: absolute;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .bokor-regular {
+            font-family: "Bokor", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Text in Bottom Right */
+        .bottom-right-text {
+            position: fixed;
+            bottom: 10px; /* Adjust from bottom */
+            right: 10px; /* Adjust from right */
+            color: red; /* Red text */
+            font-size: 12px; /* Small font size */
+            z-index: 5; /* Above other elements */
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+    </a> -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="">Welcome</a>
+        <a href="ourmission.html">Our Mission</a>
+        <a href="community.html">Community</a>
+    </div>
+
+    <!-- Section Content (Initial Welcome) -->
+    <div class="section-container" id="section-container">
+        <h1 class="bokor-regular">GUARDIANS OF ARCHIVES</h1>
+    </div>
+
+    <button id="guardianButton" class="guardian-button">Become a Guardian</button>
+
+    <div id="popupModal" class="popup-modal hidden">
+        <div class="popup-content">
+            <h2 style="color: white;">Provide Your Email Address</h2>
+            <input type="email" id="emailField" placeholder="Enter your email" />
+            <button id="sendProposalButton" class="send-button">Send Proposal</button>
+            <button id="closeModalButton" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Text in Bottom Right -->
+    <div class="bottom-right-text">Hackathon MoMu 2024</div>
+
+    <!-- WebGL Canvas -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

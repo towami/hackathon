@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 3D Assets</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif; /* Default font */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            z-index: 1; /* Ensure navbar is above content */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Content Container */
+        .content {
+            margin-top: 100px; /* Space below navbar */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-family: "UnifrakturMaguntia", cursive; /* Decorative font */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Download Links */
+        .download-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .download-links a {
+            text-decoration: none;
+            color: black;
+            background-color: rgba(255, 222, 178, 0.807);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-links a:hover {
+            background-color: rgba(255, 200, 150, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Welcome</a>
+        <a href="ourmission.html">Our Mission</a>
+        <a href="community.html">Community</a>
+        <a href="getAssets.html">Get 3D Assets</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Download 3D Assets</h1>
+        <p>Explore and download 3D models and assets for your projects. Click on the links below to access the files.</p>
+
+        <div class="download-links">
+            <a href="forweb/full fencing look_website.obj" download>Download full fencing look .obj</a>
+            <a href="forweb/Guardian of the Archices_full look.dxf" download>Download full fencing look .dxf</a>
+        </div>
+    </div>
+
+</body>
+</html>

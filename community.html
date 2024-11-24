@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black; /* Black background */
+            overflow: hidden; /* Prevent scrolling */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            height: 75px;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Centered World Map */
+        .world-map {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%; /* Ensure responsiveness */
+            max-height: 80%; /* Ensure responsiveness */
+            z-index: 0; /* Behind other elements */
+        }
+
+        /* Custom Dot Image */
+        .glowing-dot {
+            position: absolute;
+            width: 30px; /* Adjust the size of the image */
+            height: 30px;
+            background-image: url('mousecur.png'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Ensure the image stays circular */
+            box-shadow: 0 0 10px rgb(0, 255, 0), 0 0 20px green;
+            z-index: 2;
+            cursor: pointer;
+            top: 34%; /* Adjust as needed for the map */
+            left: 49%; /* Adjust as needed for the map */
+            transform: translate(-50%, -50%); /* Center the dot */
+        }
+
+                /* Custom Dot Image */
+        .glowing-dot2 {
+            position: absolute;
+            width: 30px; /* Adjust the size of the image */
+            height: 30px;
+            background-image: url('mousecur.png'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Ensure the image stays circular */
+            box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px red;
+            z-index: 2;
+            cursor: pointer;
+            top: 40%; /* Adjust as needed for the map */
+            left: 60%; /* Adjust as needed for the map */
+            transform: translate(-50%, -50%); /* Center the dot */
+        }
+
+        .glowing-dot3 {
+            position: absolute;
+            width: 30px; /* Adjust the size of the image */
+            height: 30px;
+            background-image: url('mousecur.png'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Ensure the image stays circular */
+            box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px red;
+            z-index: 2;
+            cursor: pointer;
+            top: 34%; /* Adjust as needed for the map */
+            left: 26%; /* Adjust as needed for the map */
+            transform: translate(-50%, -50%); /* Center the dot */
+        }
+
+        /* Popup */
+        .popup {
+            position: absolute;
+            width: 350px;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 5;
+            display: none; /* Initially hidden */
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: red;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: darkred;
+        }
+
+        .momu {
+            text-decoration: none;
+            color: red;
+        }
+
+        .momu:hover {
+            opacity: 0.7;
+        }
+
+        .bottom-right-text {
+            position: fixed;
+            bottom: 10px; /* Adjust from bottom */
+            right: 10px; /* Adjust from right */
+            color: red; /* Red text */
+            font-size: 12px; /* Small font size */
+            z-index: 5; /* Above other elements */
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <a href="index.html">
+        <img src="logo2.png" alt="Logo" class="logo">
+    </a>
+
+    <div class="bottom-right-text">Hackathon MoMu 2024</div>
+
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Welcome</a>
+        <a href="ourmission.html">Our Mission</a>
+        <a href="community.html">Community</a>
+    </div>
+
+    <!-- World Map -->
+    <img src="worldmap.png" alt="World Map" class="world-map">
+
+    <!-- Glowing Dot -->
+    <div class="glowing-dot" id="glowingDot"></div>
+    <div class="glowing-dot2" id="glowingDot2"></div>
+    <div class="glowing-dot3" id="glowingDot3"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <h3>MoMu - Fashion Museum Antwerp</h3>
+        <a class="momu" target="_blank" href="https://www.momu.be/en/">Go to the website</a>
+        <p></p>
+        <button id="closePopup">Close</button>
+    </div>
+
+    <script>
+        const glowingDot = document.getElementById('glowingDot');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+
+        // Add a click event listener to the glowing dot
+        glowingDot.addEventListener('click', () => {
+            // Position the popup relative to the glowing dot
+            const dotRect = glowingDot.getBoundingClientRect();
+            popup.style.top = `${dotRect.top - popup.offsetHeight - 10}px`; // Position above the dot
+            popup.style.left = `${dotRect.left + dotRect.width / 2 - popup.offsetWidth / 2}px`; // Center horizontally
+            popup.style.display = 'block'; // Show the popup
+        });
+
+        // Add a click event listener to the close button in the popup
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none'; // Hide the popup
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of Archives</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto; /* Adjust for content */
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif; /* Default font */
+        }
+
+		.logo {
+            position: fixed; /* Keep the logo fixed in the top-left corner */
+            top: 10px; /* Adjust spacing from the top */
+            left: 15px; /* Adjust spacing from the left */
+            height: 75px; /* Set the size of the logo */
+            z-index: 10; /* Ensure the logo stays above other elements */
+            cursor: pointer; /* Make it clickable */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            z-index: 1; /* Ensure navbar is above content but below the logo */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+		video {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+			z-index: 0; /* Place video behind all content */
+			object-fit: cover; /* Ensure the video covers width proportionally */
+			transform: translateY(-400px); /* Shift the video up by 50px */
+			opacity: 0.5;
+		}
+
+
+        .content {
+            position: relative;
+            z-index: 1; /* Place content above the video */
+            padding: 80px 20px; /* Spacing for content */
+            max-width: 800px; /* Limit width for readability */
+            margin: 0 auto; /* Center content horizontally */
+            text-align: left;
+            line-height: 1.8; /* Improve readability */
+            font-size: 1.1em; /* Slightly larger text */
+        }
+
+        h1, h2 {
+            font-family: "UnifrakturMaguntia", cursive; /* Decorative font */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-family: Arial, sans-serif; /* Standard font for paragraphs */
+            margin-bottom: 20px;
+        }
+
+        .mission-points {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .mission-points li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+
+        .guardian-button {
+            display: block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: black;
+            background-color: rgba(255, 222, 178, 0.807);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+		.bottom-right-text {
+            position: fixed;
+            bottom: 10px; /* Adjust from bottom */
+            right: 10px; /* Adjust from right */
+            color: red; /* Red text */
+            font-size: 12px; /* Small font size */
+            z-index: 5; /* Above other elements */
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+	<a href="index.html">
+        <img src="logo2.png" alt="Logo" class="logo">
+    </a>
+
+    <div class="bottom-right-text">Hackathon MoMu 2024</div>
+
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Welcome</a>
+        <a href="ourmission.html">Our Mission</a>
+        <a href="community.html">Community</a>
+    </div>
+
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline>
+        <source src="darchive.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Mission Content -->
+    <div class="content">
+        <h1>Our Mission</h1>
+        <h2>Preserve, Protect, and Celebrate Fashion Heritage</h2>
+
+        <p>
+            Fashion is more than just clothing—it’s a living record of culture, craftsmanship, and creativity.
+            At MoMu and beyond, archives hold the stories of our past, yet many of these treasures remain at
+            risk of being lost to time. Our mission is to bring these archives to life, unite a global community
+            of fashion enthusiasts, and ensure that the legacy of fashion is preserved for generations to come.
+        </p>
+
+        <h2>Why We’re Here</h2>
+        <p>We are here to:</p>
+        <ul class="mission-points">
+            <li><strong>Unite:</strong> Build a global platform for fashion museums, enthusiasts, and archives lovers to share and celebrate their collections.</li>
+            <li><strong>Preserve:</strong> Digitize, protect, and document rare and historic fashion pieces to prevent their loss.</li>
+            <li><strong>Inspire:</strong> Empower a new generation of creators, historians, and fashion enthusiasts to explore and honor the artistry of the past.</li>
+            <li><strong>Celebrate:</strong> Champion the craftsmanship and stories that shape fashion’s legacy, connecting communities worldwide.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
