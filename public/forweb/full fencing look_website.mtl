@@ -1,0 +1,117 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl Material104069
+Ka 0.257132 0.257132 0.257132
+Kd 1.000000 1.000000 1.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA.png
+newmtl 2032COM2113_FRONT_5612797
+Ka 0.249065 0.236757 0.222695
+Kd 0.968627 0.920760 0.866072
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1874/ST2013-fabricB_BASE_DESATURATION.png
+map_Kd C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1874/ST2013-fabricB_BASE_DESATURATION.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1875/ST2013-fabricB_NRM_63.png
+newmtl 2006COM1731_FRONT_5612731
+Ka 0.257132 0.257132 0.257132
+Kd 1.000000 1.000000 1.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA_BASE_6290254.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA_BASE_6290254.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA_NRM.png
+newmtl V2_Cut_Sew_Knit_Mesh_Tulle_2_FRONT_6496646
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_BASE.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_BASE.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1876/Cut _ Sew Knit_Mesh _ Tulle_2_NRM_40.png
+newmtl FABRIC_2_FRONT_5946581
+Ka 0.257132 0.257132 0.257132
+Kd 1.000000 1.000000 1.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1877/ST2013-fabricA_NRM_5.png
+newmtl PT_FABRIC_FRONT_74083
+Ka 0.257132 0.257132 0.257132
+Kd 1.000000 1.000000 1.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Buttonhole_Eyelet_Square_1881.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Buttonhole_Eyelet_Square_1881.png
+newmtl Material1816
+Ka 0.189572 0.160133 0.115973
+Kd 0.737255 0.622766 0.451026
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+newmtl Material1814
+Ka 0.189572 0.160133 0.115973
+Kd 0.737255 0.622766 0.451026
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+newmtl PT_FABRIC_FRONT_2591
+Ka 0.211756 0.184530 0.152262
+Kd 0.823529 0.717647 0.592157
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/400.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/400.png
+newmtl Material2897
+Ka 0.205706 0.183522 0.171421
+Kd 0.800000 0.713726 0.666667
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/singstitch01.jpg
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/singstitch01.jpg
+newmtl Material2569
+Ka 0.211756 0.192766 0.171064
+Kd 0.823529 0.749676 0.665278
+Ks 0.490000 0.490000 0.490000
+Ns 83.552750
+illum 2
+d 1.000000
+newmtl FABRIC_1_FRONT_42968
+Ka 0.081677 0.076231 0.076231
+Kd 0.317647 0.296468 0.296468
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1878/ST2013-fabricB_NRM_20.png
+newmtl Material2567
+Ka 0.211756 0.192766 0.171064
+Kd 0.823529 0.749676 0.665278
+Ks 0.490000 0.490000 0.490000
+Ns 83.552750
+illum 2
+d 1.000000

@@ -48,7 +48,7 @@ closeModalButton.addEventListener('click', () => {
 
 // Load Fencing Mask
 loader.load(
-    '/forweb/mask_landing_page.obj', // Replace with your actual OBJ file path
+    '/11724_helmet_v1_L3.obj', // Replace with your actual OBJ file path
     (object) => {
         fencingMask = object;
 
@@ -67,8 +67,8 @@ loader.load(
         });
 
         // Set object transformations
-        fencingMask.position.set(0, 0, 0); // Adjusted y-position to 80 (10 units lower from 90)
-        fencingMask.scale.set(150, 150, 150); // Uniform scaling
+        fencingMask.position.set(0, 94, 0); // Adjusted y-position to 80 (10 units lower from 90)
+        fencingMask.scale.set(5, 5, 5); // Uniform scaling
         scene.add(fencingMask);
 
         // Update camera to look at the object position
@@ -106,14 +106,14 @@ let currentSectionIndex = 0;
 
 // Create a video element
 const videoElement = document.createElement('video');
-videoElement.src = '/video.mp4'; // Replace with your video file path
+videoElement.src = '/AI video enhanced.mp4'; // Replace with your video file path
 videoElement.loop = true; // Enable looping
 videoElement.muted = true; // Mute if necessary
 videoElement.style.position = 'fixed';
 videoElement.style.top = '56%';
 videoElement.style.left = '50%';
 videoElement.style.transform = 'translate(-50%, -50%)';
-videoElement.style.width = '60%';
+videoElement.style.width = '25%';
 videoElement.style.height = 'auto';
 videoElement.style.display = 'none'; // Initially hidden
 videoElement.style.zIndex = '2'; // Ensure video is above canvas

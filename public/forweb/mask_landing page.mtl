@@ -1,0 +1,32 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl V2_Cut_Sew_Knit_Mesh_Tulle_2_FRONT_6496646
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_BASE.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_BASE.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/Cut _ Sew Knit_Mesh _ Tulle_2_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1871/Cut _ Sew Knit_Mesh _ Tulle_2_NRM_40.png
+newmtl FABRIC_2_FRONT_5946581
+Ka 0.257132 0.257132 0.257132
+Kd 1.000000 1.000000 1.000000
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_Ka C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB.png
+map_Kd C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB.png
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricA_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1872/ST2013-fabricA_NRM_5.png
+newmtl FABRIC_1_FRONT_42968
+Ka 0.081677 0.076231 0.076231
+Kd 0.317647 0.296468 0.296468
+Ks 0.075000 0.075000 0.075000
+Ns 28.763239
+illum 2
+d 1.000000
+map_bump C:/Users/yasmi/OneDrive/Desktop/MoMu hackathon/ST2013-fabricB_NRM.png
+map_bump C:/Users/yasmi/AppData/Local/CLO/CLO Network OnlineAuth/15008/1873/ST2013-fabricB_NRM_20.png

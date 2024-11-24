@@ -21,7 +21,7 @@
             font-family: Arial, sans-serif; /* Default font */
         }
 
-		.logo {
+        .logo {
             position: fixed; /* Keep the logo fixed in the top-left corner */
             top: 10px; /* Adjust spacing from the top */
             left: 15px; /* Adjust spacing from the left */
@@ -57,19 +57,18 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
-		video {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: auto;
-			min-height: 100%;
-			z-index: 0; /* Place video behind all content */
-			object-fit: cover; /* Ensure the video covers width proportionally */
-			transform: translateY(-400px); /* Shift the video up by 50px */
-			opacity: 0.5;
-		}
-
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            z-index: 0; /* Place video behind all content */
+            object-fit: cover; /* Ensure the video covers width proportionally */
+            transform: translateY(-400px); /* Shift the video up by 50px */
+            opacity: 0.5;
+        }
 
         .content {
             position: relative;
@@ -107,20 +106,27 @@
             margin-bottom: 10px;
         }
 
-        .guardian-button {
+        .redirect-button {
             display: block;
-            margin: 40px auto;
-            padding: 15px 30px;
+            margin: 20px auto 0; /* Center and add space above the button */
+            padding: 5px 10px;
+			width: 100%;
             font-size: 18px;
             color: black;
             background-color: rgba(255, 222, 178, 0.807);
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: opacity 0.3s ease-in-out;
+            text-align: center;
+            text-decoration: none; /* Remove underline from links */
+            transition: background-color 0.3s ease-in-out;
         }
 
-		.bottom-right-text {
+        .redirect-button:hover {
+            background-color: rgba(255, 200, 150, 0.9);
+        }
+
+        .bottom-right-text {
             position: fixed;
             bottom: 10px; /* Adjust from bottom */
             right: 10px; /* Adjust from right */
@@ -133,12 +139,11 @@
 </head>
 <body>
 
-	<a href="index.html">
+    <a href="index.html">
         <img src="logo2.png" alt="Logo" class="logo">
     </a>
 
     <div class="bottom-right-text">Hackathon MoMu 2024</div>
-
 
     <!-- Navbar -->
     <div class="navbar">
@@ -173,6 +178,9 @@
             <li><strong>Inspire:</strong> Empower a new generation of creators, historians, and fashion enthusiasts to explore and honor the artistry of the past.</li>
             <li><strong>Celebrate:</strong> Champion the craftsmanship and stories that shape fashion’s legacy, connecting communities worldwide.</li>
         </ul>
+
+        <!-- Redirect Button -->
+        <a href="https://www.darchive.io" target="_blank" class="redirect-button">View the archive</a>
     </div>
 
 </body>
