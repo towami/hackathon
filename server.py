@@ -3,7 +3,7 @@ import http.server
 import socketserver
 import mimetypes
 
-PORT = 8006
+PORT = 8007
 
 # Ensure '.js' files are served with 'application/javascript' MIME type
 mimetypes.init()  # Initialize the mimetypes

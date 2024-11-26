@@ -147,11 +147,18 @@
             font-size: 16px;
         }
 
-        .send-button {
+        .send-buttonfield {
             background-color: #28a745; /* Green button */
             color: white;
             margin-right: 10px;
         }
+        .send-button {
+            background-color: #28a745; /* Green button */
+            color: white;
+            margin-right: 10px;
+            text-decoration-line: none;
+        }
+
 
         .close-button {
             background-color: #dc3545; /* Red button */
@@ -218,13 +225,16 @@
         <div class="popup-content">
             <h2 style="color: white;">Provide Your Email Address</h2>
             <input type="email" id="emailField" placeholder="Enter your email" />
-            <button id="sendProposalButton" class="send-button">Send Proposal</button>
+            <button class="send-buttonfield">
+              <a id="sendProposalButton" class="send-button" href="https://forms.gle/dueV1MHeF1jait9SA" target="_blank">Send Proposal</a>
+
+            </button>
             <button id="closeModalButton" class="close-button">Close</button>
         </div>
     </div>
 
     <!-- Text in Bottom Right -->
-    <div class="bottom-right-text">Hackathon MoMu 2024</div>
+    <div class="bottom-right-text">Demo Hackathon MoMu 2024</div>
 
     <!-- Include Three.js and OBJLoader
     <script src="https://unpkg.com/three@0.153.0/build/three.min.js"></script>

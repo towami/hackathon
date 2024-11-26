@@ -185,7 +185,7 @@ sendProposalButton.addEventListener('click', () => {
   console.log('Send Proposal button clicked.');
   const email = emailField.value.trim();
   if (email) {
-    alert(`Proposal sent to ${email}!`);
+  //  alert(`Proposal sent to ${email}!`);
     popupModal.classList.remove('visible');
     emailField.value = '';
     createAdditionalSections();
